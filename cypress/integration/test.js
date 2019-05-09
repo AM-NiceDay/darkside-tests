@@ -1,9 +1,21 @@
-describe("Test", () => {
-  it("is live", () => {
+// Cypress.on("fail", (error, runnable) => {
+//   console.log(runnable);
+// });
+
+localStorage.debug = "cypress:*";
+
+describe("1", () => {
+  it("__1.1__", () => {
     cy.visit("/");
   });
 
-  it("able to create new todos", () => {
+  it("__1.2__", () => {
+    cy.visit("/")
+      .getByTestId("todo-form-input", { timeout: 100 })
+      .getByTestId("todo-form-submit", { timeout: 100 });
+  });
+
+  it("__1.3__", () => {
     cy.visit("/")
       .getByTestId("todo-form-input", { timeout: 100 })
       .type("Test")
