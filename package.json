@@ -6,7 +6,7 @@
   "author": "AM_NiceDay <a.krasikau@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "e2e": "cypress run"
+    "e2e": "cypress run --reporter reporters/custom.js"
   },
   "devDependencies": {
     "cypress": "^3.2.0",
